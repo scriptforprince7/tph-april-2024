@@ -97,7 +97,7 @@ class PrivacyPolicyAdmin(admin.ModelAdmin):
     list_display = ['privacy_policy_content']     
 
 class BlogsAdmin(admin.ModelAdmin):
-    list_display = ['blog_title', 'blog_image', 'blog_description', 'blog_tags']      
+    list_display = ['blog_title', 'blog_image', 'blog_description']      
 
 
 class WorkAdmin(admin.ModelAdmin):

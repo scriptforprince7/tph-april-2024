@@ -351,7 +351,21 @@ def write_to_ceo(request):
     return render(request, "core/write-to-ceo.html")
 
 def blogs(request):
-    return render(request, "core/blog.html")
+    blogs = Blogs.objects.all()
+
+    context = {
+        "blogs": blogs,
+    }
+    return render(request, "core/blog.html",  context)
+
+def blog_details(request, blog_title):
+    blog_detail = Blogs.objects.get(blog_title=blog_title)
+
+    context = {
+        "blog_detail": blog_detail,
+    }
+
+    return render(request, "core/blog-details.html", context)
 
 def privacypolicy(request):
     privacy_policy = PrivacyPolicy.objects.first()  # Assuming you have a PrivacyPolicy instance

@@ -23,6 +23,7 @@ urlpatterns = [
     path("about-us/", about, name="about-us"),
     path("our-works/", our_works, name="our_works"),
     path("our-media/", our_media, name="our_media"),
+    path("blog_details/<blog_title>/", blog_details, name="blog_details"),
     path("contact-us/", contact, name="contact-us"),
     path("career", career, name="career"),
     path("write-to-ceo/", write_to_ceo, name="write_to_ceo"),

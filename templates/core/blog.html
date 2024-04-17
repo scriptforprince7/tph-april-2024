@@ -186,13 +186,18 @@ body { background-color: #fff; }.page-header .branding__logo a { padding-top: 5p
 
 				
 							<div class="page-title-bar-heading">
-				<h1 class="heading"><span>Blog</span></h1>			</div>
+				<h1 class="heading"><span>Read Our Latest Thoughts</span></h1>			</div>
 			
 							</div>
 		</div>
 	</div>
 </div>
-	<div id="page-content" class="page-content">
+<style>
+	.page-content>[class*=container]>.row {
+		justify-content: center;
+	}
+</style>
+	<div id="page-content" class="page-content" style="justify-content: center;">
 		<div class="container">
 			<div class="row">
 
@@ -203,205 +208,31 @@ body { background-color: #fff; }.page-header .branding__logo a { padding-top: 5p
 			 style="--grid-columns-desktop: 2;--grid-columns-tablet-extra: 2;--grid-columns-mobile-extra: 1;--grid-gutter-desktop: 30;--grid-gutter-tablet-extra: 30;--grid-gutter-mobile-extra: 30;"			>
 		<div class="minimog-grid lazy-grid">
 							<div class="grid-sizer"></div>
-			
+			{% for blog in blogs %}
 							<div class="grid-item post-item post-266 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-modern-furniture">
 					
 <div class="post-wrapper minimog-box">
 			<div class="post-thumbnail-wrapper">
 			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/setup-your-surround-sound-speaker/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_12" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_12-740x480.jpeg" class=" ll-image" /></div>				</a>
+				<a href="{% url 'core:blog_details' blog.blog_title %}">
+					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="{{blog.blog_image.url}}" width="740" height="480" alt="megamog_blog_12" data-src="{{blog.blog_image.url}}" class=" ll-image" /></div>				</a>
 			</div>
 		</div>
 		<div class="post-caption">
 					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
+				<span>Posted on: {{blog.date}}</span>			</div>
 			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/setup-your-surround-sound-speaker/">Why You Need To Choose Modern Furniture</a>
+	<a href="{% url 'core:blog_details' blog.blog_title %}">{{blog.blog_title}}</a>
 </h3>
+<p>{{blog.blog_description|safe}}</p>
+
 	</div>
 </div>
 				</div>
-							<div class="grid-item post-item post-279 post type-post status-publish format-standard has-post-thumbnail hentry category-industry">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/the-hottest-home-office-modern-furniture-trends-2021/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_02" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_02-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/industry/"><span>Industry</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/the-hottest-home-office-modern-furniture-trends-2021/">The Hottest Home Office Modern Furniture Trends – 2021</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-280 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/transform-your-living-room-with-sohoconcept/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_03" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_03-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/transform-your-living-room-with-sohoconcept/">Transform your Living Room with SohoConcept</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-477 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/get-ready-for-winter-with-sohoconcept/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_04" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_04-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/get-ready-for-winter-with-sohoconcept/">Get Ready for Winter with SohoConcept</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-476 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/transform-your-room-to-a-study-space-with-sohoconcept/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_05" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_05-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/transform-your-room-to-a-study-space-with-sohoconcept/">Transform Your Room to a Study Space with SohoConcept</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-475 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/transform-your-house-this-fall-with-sohoconcept/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_06" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_06-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/transform-your-house-this-fall-with-sohoconcept/">Transform your House This Fall with SohoConcept</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-474 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/stools-and-chairs-for-summer-2020/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_07" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_07-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/stools-and-chairs-for-summer-2020/">Stools and Chairs for Summer 2020</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-473 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/brighten-your-house-with-sohoconcepts-mirrors/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_08" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_08-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/brighten-your-house-with-sohoconcepts-mirrors/">Brighten Your House with SohoConcept’s Mirrors</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-472 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/spice-up-patios-with-modern-et-als-metal-chairs/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_09" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_09-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/spice-up-patios-with-modern-et-als-metal-chairs/">Spice Up Patios with Modern Et Al’s Metal Chairs</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-471 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/brightening-up-your-house-with-modern-furniture/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_10" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_10-740x480.png" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/brightening-up-your-house-with-modern-furniture/">Brightening Up Your House with Modern Furniture</a>
-</h3>
-	</div>
-</div>
-				</div>
-							<div class="grid-item post-item post-470 post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-design-trends tag-furniture tag-life-style tag-modern-furniture tag-sofa">
-					
-<div class="post-wrapper minimog-box">
-			<div class="post-thumbnail-wrapper">
-			<div class="post-feature post-thumbnail minimog-image">
-				<a href="https://minimog.thememove.com/megamog/boucle-fabric-makes-a-comeback/">
-					<div class="minimog-lazy-image" style="--lazy-image-width: 740px;--lazy-image-height: 64.864864864865%;"><img  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20740%20480%22%3E%3C%2Fsvg%3E" width="740" height="480" alt="megamog_blog_11" data-src="https://minimog-4437.kxcdn.com/megamog/wp-content/uploads/sites/3/2022/02/megamog_blog_11-740x480.jpeg" class=" ll-image" /></div>				</a>
-			</div>
-		</div>
-		<div class="post-caption">
-					<div class="post-categories">
-				<a href="https://minimog.thememove.com/megamog/category/design/"><span>Design</span></a>			</div>
-			<h3 class="post-title post-title-2-rows">
-	<a href="https://minimog.thememove.com/megamog/boucle-fabric-makes-a-comeback/">Bouclé Fabric Makes a Comeback</a>
-</h3>
-	</div>
-</div>
-				</div>
+				{% endfor %}
+
+							<div class="grid-item post-item post-279 post type-post
+				
 					</div>
 
 		<nav class="minimog-grid-pagination" data-type="">
@@ -486,7 +317,8 @@ body { background-color: #fff; }.page-header .branding__logo a { padding-top: 5p
 
 													</div>
 					</div>
-					<div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div>		<div class="tm-demo-options-toolbar">
+					<div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div>	
+						<!-- <div class="tm-demo-options-toolbar">
 						<a href="#" id="open-modal-demo-preview"
 			   class="toggle-quick-options open-quick-options hint--bounce hint--left hint--black"
 			   aria-label="Preview Demos">
@@ -513,7 +345,7 @@ body { background-color: #fff; }.page-header .branding__logo a { padding-top: 5p
 			   aria-label="Purchase Minimog">
 				<i class="fal fa-shopping-bag"></i>
 			</a>
-		</div>
+		</div> -->
 		<div class="minimog-modal modal-demo-preview" id="modal-demo-preview"></div>
 		<div class="minimog-modal modal-promo-popup style-01" id="modal-promo-popup" aria-hidden="true" role="dialog" hidden>
 	<div class="modal-overlay"></div>
