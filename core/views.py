@@ -254,8 +254,6 @@ def delete_item_from_cart(request):
     context = render_to_string("core/cart.html", {"cart_data": request.session['cart_data_obj'], 'totalcartitems': len(request.session['cart_data_obj']), 'cart_total_amount': cart_total_amount})
     return JsonResponse({"data": context, 'totalcartitems': len(request.session['cart_data_obj'])})        
 
-
-
 def update_cart(request):
     product_id = str(request.GET['id'])
     product_qty = request.GET['qty']
